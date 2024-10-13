@@ -35,39 +35,39 @@ function updateProduct(index) {
     productDescription.textContent = products[index].description;
     productPrice.textContent = products[index].price;
 
-    // Atualizar as bolinhas (dots)
+    
     updateDots(index);
 }
 
-// Função para mostrar o próximo produto
+
 function nextProduct() {
     currentProductIndex = (currentProductIndex + 1) % products.length;
     updateProduct(currentProductIndex);
 }
 
-// Função para mostrar o produto anterior
+
 function previousProduct() {
     currentProductIndex = (currentProductIndex - 1 + products.length) % products.length;
     updateProduct(currentProductIndex);
 }
 
-// Função para definir o produto com base no clique na bolinha
+
 function setProduct(index) {
     currentProductIndex = index;
     updateProduct(index);
 }
 
-// Atualiza a aparência das bolinhas (dots)
+
 function updateDots(index) {
     const dots = document.querySelectorAll('.dot');
     dots.forEach(dot => dot.classList.remove('active'));
     dots[index].classList.add('active');
 }
 
-// Inicializa o primeiro produto
+
 updateProduct(0);
 
-// Lista de produtos do catálogo
+
 const catalogProducts = [
     {
         name: "Camisa oversized NO DAYS OFF preta",
@@ -125,9 +125,9 @@ const catalogProducts = [
     }
 ];
 
-let productsLoaded = 0; // Número de produtos já carregados
+let productsLoaded = 0; 
 
-// Função para renderizar um produto
+
 function renderProduct(product) {
     const productGrid = document.getElementById('product-grid');
     const productCard = `
@@ -153,12 +153,12 @@ function openModal(name, image, sizeImage,) {
     const modal = document.getElementById('productModal');
     modal.style.display = "block";
 
-    // Fecha o modal quando clica no "X"
+    
     document.querySelector('.close').onclick = function() {
         modal.style.display = "none";
     }
 
-    // Fecha o modal quando clica fora do conteúdo
+  
     window.onclick = function(event) {
         if (event.target === modal) {
             modal.style.display = "none";
@@ -166,40 +166,40 @@ function openModal(name, image, sizeImage,) {
     }
 }
 
-// Função para carregar mais produtos
+
 function loadMoreProducts() {
     const productsToLoad = catalogProducts.slice(productsLoaded, productsLoaded + 3);
     productsToLoad.forEach(product => renderProduct(product));
     productsLoaded += productsToLoad.length;
 
-    // Atualizar a exibição dos botões
+   
     updateButtonsVisibility();
 }
 
-// Função para remover os últimos 3 produtos carregados
+
 function loadLessProducts() {
     const productGrid = document.getElementById('product-grid');
     const cardsToRemove = Array.from(productGrid.children).slice(-3);
     cardsToRemove.forEach(card => card.remove());
     productsLoaded -= cardsToRemove.length;
 
-    // Atualizar a exibição dos botões
+    
     updateButtonsVisibility();
 }
 
-// Atualizar a visibilidade dos botões "Carregar mais" e "Carregar menos"
+
 function updateButtonsVisibility() {
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     const loadLessBtn = document.getElementById('loadLessBtn');
 
-    // Mostrar ou esconder o botão "Carregar mais"
+    
     if (productsLoaded >= catalogProducts.length) {
         loadMoreBtn.style.display = 'none';
     } else {
         loadMoreBtn.style.display = 'block';
     }
 
-    // Mostrar ou esconder o botão "Carregar menos"
+    
     if (productsLoaded > 3) {
         loadLessBtn.style.display = 'block';
     } else {
@@ -207,12 +207,12 @@ function updateButtonsVisibility() {
     }
 }
 
-// Carregar os primeiros 3 produtos quando a página carregar
+
 window.onload = function() {
     loadMoreProducts();
 }
 
-// Adicionar eventos aos botões "Carregar mais" e "Carregar menos"
+
 document.getElementById('loadMoreBtn').addEventListener('click', function(event) {
     event.preventDefault();
     loadMoreProducts();
