@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gan Team Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="assets/imgs/LogoGT.png" sizes="32x32" type="image/png">
+</head>
+<body>
+    <div class="header-mobile">
+        <p>PRÉ VENDA (ATÉ 31/10)<br>
+        Compre 2 e leve 3!!! Na compra de duas de nossas camisetas até o dia 31 de Outubro, você leva uma terceira totalmente de graça!<br>
+        NÃO PERCA!!!</p>
+    </div>
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="hero-text">
+                <img id="homeImage" src="assets/imgs/LogoGT.png" alt="">
+                <h1>GAN TEAM STORE</h1>
+                <p>Cuidando do seu corpo e autoestima!</p>
+                <p>Trabalhamos com peças de qualidade, design voltado ao conforto e a valorização do seu corpo, conferindo bem-estar e elegância!</p>
+                <a href="#catalog" class="btn primary">Ver produtos</a>
+            </div>
+    
+            <div class="product-highlight">
+                <div class="arrow-left" onclick="previousProduct()">&#10094;</div>
+
+                <div class="header-product-card" id="highlight-product">
+                    <img src="assets/imgs/CLASSICA C P.jpg" alt="Conjunto Lingerie" class="product-image">
+                    <div class="product-details">
+                        <h2>Camisa Oversized Clássica NO DAYS OFF</h2>
+                        <p>Este conjunto é para quem busca conforto e motivação na hora daquele treino pesado.</p>
+                        <p class="price">R$ 100,00</p>
+                        <a href="#catalog" class="btn secondary">Ver no catálogo</a>
+                    </div>
+                    <div class="dots">
+                        <span class="dot active" onclick="setProduct(0)"></span>
+                        <span class="dot" onclick="setProduct(1)"></span>
+                        <span class="dot" onclick="setProduct(2)"></span>
+                    </div>
+                </div>
+
+                <div class="arrow-right" onclick="nextProduct()">&#10095;</div>
+
+                
+            </div>
+        </div>
+    </header>
+
+     <section id="catalog" class="catalog">
+        <h2>Catálogo Gan Team</h2>
+        <p>Trabalhamos com peças únicas e designs inovadores. Afinal, você merece o melhor estilo para o seu treino e também seu dia a dia.</p>
+        <div id="product-grid" class="product-grid"></div>
+        
+        <div class="load-buttons">
+            <a id="loadMoreBtn" href="#" class="btn primary">Carregar mais</a>
+            <a id="loadLessBtn" href="#" class="btn primary" style="display: none;">Carregar menos</a>
+        </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalProductName"></h2>
+            <img id="modalProductImage" src="" alt="">
+            <img id="modalSizesImage" src="" alt="">
+        </div>
+    </div>
+
+    </section>
+
+<footer class="footer">
+    <div class="container-footer">
+        <div class="footer-left">
+            <img src="assets/imgs/LogoGT.png" alt="Logo Gan Team Store">
+        </div>
+
+        <div class="footer-center">
+            <h3>Nos siga nas redes sociais</h3>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@ganneves" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                <a href="https://www.instagram.com/ganneves/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me/5511954619955" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p>&copy; 2024 Gan Team Store. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="scrypt.js"></script>
+</html>
