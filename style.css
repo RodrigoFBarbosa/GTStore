@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+.subtitle-dest {
+    color: #a02442;
+}
+
 html {
     scroll-behavior: smooth;
 }

@@ -4,7 +4,7 @@ let currentProductIndex = 0;
 const products = [
     {
         name: "PRÉ VENDA (ATÉ 31/10)",
-        description: "Compre 2 e leve 3!!!. Na compra de duas de nossas camisetas até o dia 31 de Outubro, você leva uma terceira totalmente de graça!.",
+        description: "Compre 2 e leve 3!!!. Na compra de duas de nossas camisas Oversized até o dia 31 de Outubro, você leva uma terceira totalmente de graça!.",
         price: "NÃO PERCA!!!",
         image: "assets/imgs/sale.png"
     },
