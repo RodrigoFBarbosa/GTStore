@@ -3,10 +3,10 @@ let currentProductIndex = 0;
 // Lista de produtos
 const products = [
     {
-        name: "PRÉ VENDA (ATÉ 31/10)",
-        description: "Compre 2 e leve 3!!!. Na compra de duas de nossas camisas Oversized até o dia 31 de Outubro, você leva uma terceira totalmente de graça!.",
-        price: "NÃO PERCA!!!",
-        image: "assets/imgs/sale.png"
+        name: "PROMOÇÃO",
+        description: "70 reais de desconto! Comprando 3 de nossas camisetas Oversized você paga apenas 199,90 e com FRETE GRÁTIS.",
+        price: "3 CAMISETAS POR 199,90 e FRETE GRÁTIS",
+        image: "assets/imgs/promo.webp"
     },
     {
         name: "Camisa Oversized ZEUS",
